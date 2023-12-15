@@ -6,6 +6,7 @@
 #include "Days/Day5/day5.h"
 #include "Days/Day6/day6.h"
 #include "Days/Day7/day7.h"
+#include "Days/Day8/day8.h"
 
 int main() {
 //day1 part1
@@ -29,5 +30,7 @@ int main() {
 //day6 part2
 //    std::cout << (new day6())->oneRace("../Days/Day6/data.txt");
 //day7 part1
-    std::cout << (new day7())->totalWinningsWildcards("../Days/Day7/data.txt");
+//    std::cout << (new day7())->totalWinningsWildcards("../Days/Day7/data.txt");
+//day8 part1
+    std::cout << (new day8())->ghostSteps("../Days/Day8/data.txt");
 }
