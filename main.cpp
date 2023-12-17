@@ -8,6 +8,7 @@
 #include "Days/Day7/day7.h"
 #include "Days/Day8/day8.h"
 #include "Days/Day9/day9.h"
+#include "Days/Day10/day10.h"
 
 int main() {
 //day1 part1
@@ -35,5 +36,8 @@ int main() {
 //day8 part1
 //    std::cout << (new day8())->ghostSteps("../Days/Day8/data.txt");
 //day9 part1 and 2
-    (new day9())->extrapolate("../Days/Day9/data.txt");
+//    (new day9())->extrapolate("../Days/Day9/data.txt");
+//day10 part1 and 2
+    (new day10())->loopSteps("../Days/Day10/data.txt");
+    (new day10())->findNest("../Days/Day10/data.txt");
 }
