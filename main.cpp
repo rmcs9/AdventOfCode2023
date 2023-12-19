@@ -9,6 +9,7 @@
 #include "Days/Day8/day8.h"
 #include "Days/Day9/day9.h"
 #include "Days/Day10/day10.h"
+#include "Days/Day11/day11.h"
 
 int main() {
 //day1 part1
@@ -38,6 +39,9 @@ int main() {
 //day9 part1 and 2
 //    (new day9())->extrapolate("../Days/Day9/data.txt");
 //day10 part1 and 2
-    (new day10())->loopSteps("../Days/Day10/data.txt");
-    (new day10())->findNest("../Days/Day10/data.txt");
+//    (new day10())->loopSteps("../Days/Day10/data.txt");
+//    (new day10())->findNest("../Days/Day10/data.txt");
+//day11 part1 and 2
+    (new day11())->lengthSum("../Days/Day11/data.txt");
+    (new day11())->lengthSumFARAWAY("../Days/Day11/data.txt");
 }
