@@ -10,6 +10,8 @@
 #include "Days/Day9/day9.h"
 #include "Days/Day10/day10.h"
 #include "Days/Day11/day11.h"
+#include "Days/Day12/day12p1.h"
+#include "Days/Day12/day12p2.h"
 
 int main() {
 //day1 part1
@@ -42,6 +44,10 @@ int main() {
 //    (new day10())->loopSteps("../Days/Day10/data.txt");
 //    (new day10())->findNest("../Days/Day10/data.txt");
 //day11 part1 and 2
-    (new day11())->lengthSum("../Days/Day11/data.txt");
-    (new day11())->lengthSumFARAWAY("../Days/Day11/data.txt");
+//    (new day11())->lengthSum("../Days/Day11/data.txt");
+//    (new day11())->lengthSumFARAWAY("../Days/Day11/data.txt");
+//day12 part1
+//    (new day12p1())->comboCount("../Days/Day12/data.txt");
+//day12 part 2
+    (new day12p2())->comboUnfold("../Days/Day12/data.txt");
 }
