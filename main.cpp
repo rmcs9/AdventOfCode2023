@@ -12,6 +12,7 @@
 #include "Days/Day11/day11.h"
 #include "Days/Day12/day12p1.h"
 #include "Days/Day12/day12p2.h"
+#include "Days/Day13/day13.h"
 
 int main() {
 //day1 part1
@@ -49,5 +50,8 @@ int main() {
 //day12 part1
 //    (new day12p1())->comboCount("../Days/Day12/data.txt");
 //day12 part 2
-    (new day12p2())->comboUnfold("../Days/Day12/data.txt");
+//    (new day12p2())->comboUnfold("../Days/Day12/data.txt");
+//day13 part 1
+    (new day13())->symmetrySum("../Days/Day13/data.txt");
+
 }
