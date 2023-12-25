@@ -41,7 +41,7 @@ void day14::totalLoad(std::string fp) {
 
     // the amount of cycles needed to get to the end result can be calculated by
     // doing the initial amount of spin cycles to reach the start of the cycle (cycleStart +)
-    // then doing the remaining remaining amount of cycles after you break out of the cycle
+    // then doing the remaining amount of spincycles after the last complete cycle
     // (1000000000 - cycleStart) % cycleLength
     int iterations = cycleStart + (1000000000 - cycleStart) % cycleLength;
     for(int i = 0; i < iterations; i++){
