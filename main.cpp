@@ -14,6 +14,7 @@
 #include "Days/Day12/day12p2.h"
 #include "Days/Day13/day13.h"
 #include "Days/Day14/day14.h"
+#include "Days/Day15/day15.h"
 
 int main() {
 //day1 part1
@@ -55,6 +56,9 @@ int main() {
 //day13 part 1 and 2
 //    (new day13())->symmetrySum("../Days/Day13/data.txt");
 //day14 part 1 and 2
-    (new day14())->totalLoad("../Days/Day14/data.txt");
-
+//    (new day14())->totalLoad("../Days/Day14/data.txt");
+//day15 part 1
+//    (new day15())->hashSum("../Days/Day15/data.txt");
+//day15 part 2
+    (new day15())->focusingPower("../Days/Day15/data.txt");
 }
