@@ -1,20 +1,21 @@
-#include <iostream>
-#include "Days/Day1/day1.h"
-#include "Days/Day2/day2.h"
-#include "Days/Day3/day3.h"
-#include "Days/Day4/day4.h"
-#include "Days/Day5/day5.h"
-#include "Days/Day6/day6.h"
-#include "Days/Day7/day7.h"
-#include "Days/Day8/day8.h"
-#include "Days/Day9/day9.h"
-#include "Days/Day10/day10.h"
-#include "Days/Day11/day11.h"
-#include "Days/Day12/day12p1.h"
-#include "Days/Day12/day12p2.h"
-#include "Days/Day13/day13.h"
-#include "Days/Day14/day14.h"
-#include "Days/Day15/day15.h"
+//#include <iostream>
+//#include "Days/Day1/day1.h"
+//#include "Days/Day2/day2.h"
+//#include "Days/Day3/day3.h"
+//#include "Days/Day4/day4.h"
+//#include "Days/Day5/day5.h"
+//#include "Days/Day6/day6.h"
+//#include "Days/Day7/day7.h"
+//#include "Days/Day8/day8.h"
+//#include "Days/Day9/day9.h"
+//#include "Days/Day10/day10.h"
+//#include "Days/Day11/day11.h"
+//#include "Days/Day12/day12p1.h"
+//#include "Days/Day12/day12p2.h"
+//#include "Days/Day13/day13.h"
+//#include "Days/Day14/day14.h"
+//#include "Days/Day15/day15.h"
+#include "Days/Day16/day16.h"
 
 int main() {
 //day1 part1
@@ -60,5 +61,7 @@ int main() {
 //day15 part 1
 //    (new day15())->hashSum("../Days/Day15/data.txt");
 //day15 part 2
-    (new day15())->focusingPower("../Days/Day15/data.txt");
+//    (new day15())->focusingPower("../Days/Day15/data.txt");
+//day 16 part 1 and 2
+    (new day16())->energized("../Days/Day16/data.txt");
 }
