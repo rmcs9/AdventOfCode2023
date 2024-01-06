@@ -15,7 +15,8 @@
 //#include "Days/Day13/day13.h"
 //#include "Days/Day14/day14.h"
 //#include "Days/Day15/day15.h"
-#include "Days/Day16/day16.h"
+//#include "Days/Day16/day16.h"
+#include "Days/Day17/day17.h"
 
 int main() {
 //day1 part1
@@ -63,5 +64,7 @@ int main() {
 //day15 part 2
 //    (new day15())->focusingPower("../Days/Day15/data.txt");
 //day 16 part 1 and 2
-    (new day16())->energized("../Days/Day16/data.txt");
+//    (new day16())->energized("../Days/Day16/data.txt");
+//day 17 part 1 and 2
+    (new day17())->leastHeatLoss("../Days/Day17/data.txt");
 }
