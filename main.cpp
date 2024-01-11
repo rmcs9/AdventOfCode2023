@@ -17,7 +17,8 @@
 //#include "Days/Day15/day15.h"
 //#include "Days/Day16/day16.h"
 //#include "Days/Day17/day17.h"
-#include "Days/Day18/day18.h"
+//#include "Days/Day18/day18.h"
+#include "Days/Day19/day19.h"
 
 int main() {
 //day1 part1
@@ -69,5 +70,7 @@ int main() {
 //day 17 part 1 and 2
 //    (new day17())->leastHeatLoss("../Days/Day17/data.txt");
 //day 18 part 1 and 2
-    (new day18())->LAVA("../Days/Day18/data.txt");
+//    (new day18())->LAVA("../Days/Day18/data.txt");
+//day 19 part 1 and 2
+    (new day19())->ratingnums("../Days/Day19/data.txt");
 }
