@@ -19,6 +19,7 @@
 //#include "Days/Day17/day17.h"
 //#include "Days/Day18/day18.h"
 #include "Days/Day19/day19.h"
+#include "Days/Day20/day20.h"
 
 int main() {
 //day1 part1
@@ -72,5 +73,7 @@ int main() {
 //day 18 part 1 and 2
 //    (new day18())->LAVA("../Days/Day18/data.txt");
 //day 19 part 1 and 2
-    (new day19())->ratingnums("../Days/Day19/data.txt");
+//    (new day19())->ratingnums("../Days/Day19/data.txt");
+//day20 part 1 and 2
+	(new day20())->signals("../Days/Day20/data.txt");
 }
