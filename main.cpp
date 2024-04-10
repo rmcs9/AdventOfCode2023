@@ -19,8 +19,8 @@
 //#include "Days/Day17/day17.h"
 //#include "Days/Day18/day18.h"
 // #include "Days/Day19/day19.h"
-// #include "Days/Day20/day20.h"
-#include "Days/Day21/day21.h"
+#include "Days/Day20/day20.h"
+// #include "Days/Day21/day21.h"
 
 int main() {
 //day1 part1
@@ -76,7 +76,7 @@ int main() {
 //day 19 part 1 and 2
 //    (new day19())->ratingnums("../Days/Day19/data.txt");
 //day20 part 1 and 2
-// 	  (new day20())->signals("../Days/Day20/data.txt");
+	  (new day20())->signals("../Days/Day20/data.txt");
 //day 21 part 1 and 2
-	(new day21())->steps("../Days/Day21/data.txt");
+//    (new day21())->steps("../Days/Day21/data.txt");
 }

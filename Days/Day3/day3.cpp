@@ -1,4 +1,6 @@
 using namespace std;
+#include <vector>
+#include <list>
 #include <string>
 #include <fstream>
 #include <iostream>

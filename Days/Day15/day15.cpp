@@ -4,6 +4,8 @@
 #include <sstream>
 #include <list>
 #include <map>
+#include <unordered_map>
+#include <algorithm>
 #include "day15.h"
 
 /*

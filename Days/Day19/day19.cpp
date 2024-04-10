@@ -38,7 +38,7 @@ void day19::ratingnums(std::string fp) {
         }
     }
     std::cout << "p1 total: " << total << '\n';
-
+	
     //p2
     std::unordered_map<char, std::pair<int, int>> ranges;
     ranges['x'] = std::make_pair(1, 4001);

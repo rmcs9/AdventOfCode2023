@@ -3,6 +3,8 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 
 void day12p2::comboUnfold(std::string fp) {

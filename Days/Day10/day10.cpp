@@ -2,6 +2,8 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <vector>
+#include <unordered_map>
 #include "day10.h"
 
 

@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <stack>
+#include <vector>
+#include <cstring>
 
 struct plan {
     char dir;

@@ -1,6 +1,5 @@
 #include <string>
-#include <list>
-#include <iostream>
+#include <vector>
 #ifndef ADVENT_DAY17_H
 #define ADVENT_DAY17_H
 

@@ -1,6 +1,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <vector>
 #include <utility>
 #include "day13.h"
 

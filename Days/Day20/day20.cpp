@@ -5,6 +5,7 @@
 #include <list>
 #include <memory>
 #include <tuple>
+#include <unordered_map>
 
 std::queue<std::tuple<std::string, std::string, int>> pulseQ;
 int lowPulses = 0, highPulses = 0;

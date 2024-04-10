@@ -1,6 +1,8 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <vector>
+#include <algorithm>
 #include "day14.h"
 
 
@@ -13,7 +15,7 @@ void day14::totalLoad(std::string fp) {
         data >> line;
         map.push_back(line);
     } while (!data.eof());
-
+	
     //part 1
     std::vector<std::string> p1map = map;
     rollNorth(p1map);

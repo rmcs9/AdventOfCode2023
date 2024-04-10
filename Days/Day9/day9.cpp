@@ -2,6 +2,8 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <vector>
+#include <algorithm>
 #include "day9.h"
 
 

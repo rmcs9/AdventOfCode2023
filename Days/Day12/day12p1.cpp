@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <vector>
+#include <algorithm>
 #include "day12p1.h"
 
 

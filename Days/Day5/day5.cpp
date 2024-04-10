@@ -1,11 +1,14 @@
 using namespace std;
 
 #include "day5.h"
+#include <algorithm>
+#include <vector>
 #include <string>
 #include <fstream>
 #include <iostream>
 #include <string.h>
 #include <sstream>
+#include <limits>
 
 
 struct row {

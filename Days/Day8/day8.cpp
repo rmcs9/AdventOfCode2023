@@ -1,8 +1,9 @@
 #include <string>
 #include <fstream>
-#include <iostream>
 #include <queue>
 #include <numeric>
+#include <unordered_map>
+#include <memory>
 #include "day8.h"
 
 //objects representing a locations 2 pathways

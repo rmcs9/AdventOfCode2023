@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 #ifndef ADVENT_DAY18_H
 #define ADVENT_DAY18_H
 

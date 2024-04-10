@@ -1,6 +1,9 @@
+#include <vector>
+#include <unordered_map>
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 #include "day7.h"
 
 int day7::totalWinnings(std::string fp){

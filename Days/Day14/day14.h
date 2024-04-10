@@ -1,4 +1,5 @@
 #include <string>
+#include <unordered_map>
 #ifndef ADVENT_DAY14_H
 #define ADVENT_DAY14_H
 
