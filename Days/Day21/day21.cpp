@@ -1,6 +1,7 @@
 #include "day21.h"
 #include <fstream>
 #include <iostream>
+#include <queue>
 
 std::pair<int, int> directions[] = {
 	{1, 0},
@@ -20,7 +21,7 @@ void day21::steps(std::string fp){
 		if(!sfound){
 			for(int col = 0; col < line.length(); col++){
 				if(line.at(col) == 'S'){
-					coordQ.emplace(row, col);
+					// coordQ.emplace(row, col);
 					sfound = true;
 					start = std::make_pair(row, col);
 				}
@@ -32,15 +33,9 @@ void day21::steps(std::string fp){
 		row++;
 	} while(!data.eof());
 
-	std::cout << map.size() << " " << map[0].length() << '\n';
-	for(auto &line : map){
-		std::cout << line << '\n';
-	}
-
+	coordQ.push(start);
 	for(int i = 0; i < 64; i++){
-		std::cout << "cycle: " << i << '\n';
 		int size = coordQ.size();
-		std::cout << "size: " << size << '\n';
 		std::unordered_set<std::string> mappings;
 		for(int j = 0; j < size; j++){
 	 		auto current = coordQ.front();
@@ -49,32 +44,57 @@ void day21::steps(std::string fp){
 	 	}
 		mappings.clear();
 	}
-	
-	std::cout << "p1 total: " << coordQ.size() << "\n\n\n\n\n\n\n\n\n\n";
+	std::cout << "p1 total: " << coordQ.size() << "\n";
+	coordQ = std::queue<std::pair<int, int>>();
+	coordQ2 = std::queue<std::pair<int, int>>();
 
-	while(!coordQ.empty()){
-		coordQ.pop();
-	}
-	
-	//part 2 super slow gonna come back and finish this later
-	coordQ.emplace(start.first, start.second);
-	for(int i = 0; i < 26501365; i++){
-		std::cout << "cycle: " << i << '\n';
+	long long int y0 = p2Solve(start, 65);
+	coordQ = std::queue<std::pair<int, int>>();
+	coordQ2 = std::queue<std::pair<int, int>>();
+	std::cout << "y0: " << y0 << '\n';
 
-		long long int size = coordQ.size();
-		std::cout << "size: " << size << '\n';
+	long long int y1 = p2Solve(start, 196);
+	coordQ = std::queue<std::pair<int, int>>();
+	coordQ2 = std::queue<std::pair<int, int>>();
+	std::cout << "y1: " << y1 << '\n';
 
+	long long int y2 = p2Solve(start, 327);
+	coordQ = std::queue<std::pair<int, int>>();
+	coordQ2 = std::queue<std::pair<int, int>>();
+	std::cout << "y2: " << y2 << '\n';
+
+	long long int a = (y0 - 2 * y1 + y2) / 2;
+	std::cout << "a: " << a << '\n';
+	long long int b = (-3 * y0 + 4 * y1 - y2) / 2;
+	std::cout << "b: " << b << '\n';
+	long long int c = y0;
+	std::cout << "c: " << c << '\n';
+
+	long long int x = (26501365 - 65) / 131;
+	std::cout << "x: " << x << '\n';
+
+	long long int p2steps = (a * (x * x)) + (b * x) + c;
+
+	std::cout << "part 2: " << p2steps << std::endl;
+}
+
+
+long long int day21::p2Solve(std::pair<int, int> start, int n){
+
+	coordQ.push(start);
+	for(int i = 0; i < n; i++){
 		std::unordered_set<std::string> mappings;
-		for(long long int j = 0; j < size; j++){
+		while(!coordQ.empty()){
 			auto current = coordQ.front();
-			// std::cout << current.first << " " << current.second << '\n';
 			coordQ.pop();
 			expandp2(current.first, current.second, mappings);
 		}
+		coordQ.swap(coordQ2);
 		mappings.clear();
 	}
-	
-	std::cout << "p2 total: " << coordQ.size() << std::endl;
+
+	return coordQ.size();
+
 }
 
 void day21::expand(int row, int col, std::unordered_set<std::string> &mappings){
@@ -96,11 +116,11 @@ void day21::expand(int row, int col, std::unordered_set<std::string> &mappings){
 void day21::expandp2(int row, int col, std::unordered_set<std::string> &mappings){
 	for(auto d : directions){
 		std::string key = std::to_string(row + d.first) + " " + std::to_string(col + d.second);
-		if(!mappings.count(key)){
+		if(mappings.count(key) != 1){
 			std::pair<int, int> remap = remapCoords(row + d.first, col + d.second);	
 			try{
 				if(map[remap.first].at(remap.second) != '#'){
-					coordQ.emplace(row + d.first, col + d.second);
+					coordQ2.emplace(row + d.first, col + d.second);
 					mappings.insert(key);
 				}
 			}
@@ -116,24 +136,12 @@ void day21::expandp2(int row, int col, std::unordered_set<std::string> &mappings
 
 
 std::pair<int, int> day21::remapCoords(int row, int col){
-	if(row < map.size() && row >= 0 && col < map[0].length() && col >= 0){
-		// std::cout << row << " " << col << '\n';
-		return std::make_pair(row, col);
-	}
+	int newRow = row % (int) map.size();
+	int newCol = col % (int) map[0].length();
 
-	if(row < 0){
-		row += map.size();
-	}
-	else if(row >= map.size()){
-		row -= map.size();
-	}
+	newRow = newRow < 0 ? newRow + map.size() : newRow;
+	newCol = newCol < 0 ? newCol + map[0].length() : newCol;
 
-	if(col < 0){
-		col += map[0].length();	
-	}
-	else if(col >= map[0].length()){
-		col -= map[0].length();
-	}
-
-	return remapCoords(row, col);
+	return std::make_pair(newRow, newCol);
 }
+
